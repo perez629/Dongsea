@@ -1,0 +1,151 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{background:#101010;}
+img{width:100%;}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary-heading:'Raleway', sans-serif;
+    --secondary-heading:'Playfair Display', serif;
+
+    --primary-color:#0d0d0d;
+    --secondary-color:#1010100;
+    --white:#fff;
+}
+
+body:before{content:url(screenshot.png); opacity:0.5; position:absolute; left:0; right:0; margin:0 auto; top:0;z-index:-1;}
+body p{font-family:var(--primary-heading); font-size:16px; color:var(--white); line-height:26px;}
+a{text-decoration: none;}
+
+.wrapper{ max-width:1880px; width:100%; margin:0 auto;}
+
+
+header{background:var(--primary-color);}
+header .wrapper{max-width:1580px; width:100%; margin:0 auto;}
+.header_con{display: flex; justify-content: space-between; gap:12px; min-height:155px; align-items: center;}
+
+.main_logo{max-width:250px;}
+
+.page_nav{}
+.page_nav ul{}
+.page_nav ul li{display: inline-block;vertical-align: middle; }
+.page_nav ul li a{padding:0 5px; font-family:var(--secondary-heading); color:var(--white); font-size:16px; text-transform: uppercase; font-weight:600; padding: 21px 32px;display: block;border:1px solid transparent;}
+
+.page_nav ul li.nav_active a,
+.page_nav ul li a:hover{border:1px solid #ffffff70; border-radius:20px;}
+
+
+#banner{background:#101010;}
+.bnr_con{min-height: 200px; padding: 120px 20px 20px;}
+.bnr_info{text-align: center; font-size: 38px; font-weight: 900; color:var(--white);font-family:var(--secondary-heading); line-height:100%; text-transform:none;}
+.bnr_info span{display: block; text-transform:none; margin: 5px 0 1px;}
+.bnr_info small{display: block; font-family:var(--primary-heading); font-weight:500; text-transform: uppercase; font-size: 18px; letter-spacing: 3px;}
+
+
+#main_area{background:#101010;}
+.main_con{padding: 10px 0 20px;}
+main{}
+.tab {
+    margin-bottom: 14px;
+    overflow: hidden;
+    background-color: transparent;
+    display: flex; justify-content: center;gap:12px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+  border:1px solid transparent;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-family:var(--secondary-heading); color:var(--white); font-weight:700;
+    font-size:19px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: transparent;
+    border:1px solid #fff;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: transparent;
+    border:1px solid #fff;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    gap:12px;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    row-gap:20px;
+  }
+  .tabcontent  figure{width:24%;}
+
+  .tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
